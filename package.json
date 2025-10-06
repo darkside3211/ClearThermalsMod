@@ -1,16 +1,18 @@
 {
     "name": "clear-thermals-mod",
     "version": "1.0.0",
-    "description": "A mod to make thermals clearer and add IR functionality.",
     "main": "dist/mod.js",
-    "author": "Mico",
     "license": "MIT",
+    "author": "Darkside3211",
     "scripts": {
-        "build": "tsc",
-        "build:watch": "tsc -w"
+        "build": "tsc"
     },
     "devDependencies": {
+        "@spt-aki/models": "file:../../../Aki_Data/Server/node_modules/@spt-aki/models",
+        "@spt-aki/servers": "file:../../../Aki_Data/Server/node_modules/@spt-aki/servers",
         "@types/node": "20.12.12",
+        "tsyringe": "4.8.0",
         "typescript": "5.4.5"
     }
 }
+

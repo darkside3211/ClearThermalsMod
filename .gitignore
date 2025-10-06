@@ -3,3 +3,32 @@
 
 # Dependencies
 /node_modules
+
+
+Create `.gitignore` in your main `ClearThermalsMod` folder and paste that text in.
+
+***
+
+### Addressing the Errors in Your Editor
+
+Now, let's talk about the red lines you see in your `mod.ts` file from the screenshot. **This is completely normal and expected at this stage.**
+
+Those errors are there because your code is trying to `import` SPT-AKI's code definitions, but your project hasn't downloaded them yet. The next two steps will fix this and compile your mod.
+
+### Final Steps: Install & Build
+
+Now that all the files are created, you need to use the terminal to bring your mod to life.
+
+1.  **Install Dependencies:** Open a terminal directly in VS Code (**Terminal -> New Terminal**). A command line will appear at the bottom. Type the following command and press Enter:
+    ```bash
+    npm install
+    ```
+    This command reads your `package.json`, downloads the necessary SPT-AKI type definitions, and places them in a new `node_modules` folder. As it runs, you will see the red error lines in `mod.ts` disappear!
+
+2.  **Build Your Mod:** Once `npm install` is finished, run the build command in the same terminal:
+    ```bash
+    npm run build
+    ```
+    This command executes the "build" script from your `package.json`. It uses the TypeScript compiler (`tsc`) and the rules from `tsconfig.json` to convert your `src/mod.ts` into a JavaScript file located at `dist/mod.js`.
+
+After these two commands, you are ready to copy the entire `ClearThermalsMod` folder into your SPT `user/mods` directory and start the server.
